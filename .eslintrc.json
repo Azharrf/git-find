@@ -1,3 +1,97 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "react/function-component-definition": "off",
+        "react/react-in-jsx-scope": "off",
+        "semi": "off",
+        "react/jsx-props-no-spreading": "off",
+        "jsx-a11y/img-redundant-alt": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "linebreak-style": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "never",
+              "jsx": "never",
+              "ts": "never",
+              "tsx": "never"
+            }
+        ],
+        "no-unused-vars": "off",
+        "import/prefer-default-export": "off",
+        "no-console": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/no-array-index-key": "off",
+        "array-callback-return": "off",
+        "no-shadow": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "eqeqeq": "off",
+        "no-plusplus": "off",
+        "max-len": "off",
+        "no-undef": "off",
+        "no-else-return": "off",
+        "consistent-return": "off",
+        "react/no-this-in-sfc": "off",
+        "react/destructuring-assignment": "off",
+        "no-alert": "off",
+        "react/require-default-props": "off",
+        "object-curly-newline": "off"
+    },
+    "settings": {
+        "import/extensions": [
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx"
+        ],
+        "import/parsers": {
+        "@typescript-eslint/parser": [
+            ".ts",
+            ".tsx"
+        ]
+        },
+        "import/resolver": {
+        "node": {
+            "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+            ]
+        }
+        }
+    }
 }
