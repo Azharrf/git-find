@@ -50,11 +50,13 @@ export default function ContentMain(props: ContentMainProps) {
   return (
     <>
       <div className="col-12 main-content">
-        <div className="container">
+        <div className="container-lg">
           <div className="row">
-            <div className="col-md-4 profile">
+            <div className={username.length > 0 ? 'col-md-4 profile active' : 'col-md-4 profile'}>
               <div className="photo-profile">
-                {username && <img alt="Photo Profile" srcSet={data.avatar_url} />}
+                {username.length > 0 && (
+                  <img alt="Photo Profile" srcSet={data.avatar_url} />
+                )}
               </div>
               <h3>{data.login}</h3>
               <p>{data.name}</p>

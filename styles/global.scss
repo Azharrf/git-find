@@ -1,3 +1,4 @@
+@import "./variable.modules.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -20,7 +21,7 @@
 
   .header-content {
     width: 100%;
-    height: 15;
+    height: 200px;
     padding: 3rem 20rem;
     background-color: #f3f3f4;
     display: flex;
@@ -160,7 +161,7 @@
         }
 
         .input-group {
-          width: 40%;
+          width: 50%;
 
           input, button, a {
             font-size: 14px;
@@ -364,6 +365,142 @@
         span {
           font-size: 14px;
           color: black;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .main-wrapper {
+    width: 100%;
+    min-height: 100vh;
+  
+    .row {
+      width: 100%;
+      height: 100%;
+      padding: unset;
+      margin: unset;
+    }
+  
+    .header-content {
+      padding: 3rem;
+    }
+  
+    .main-content {
+      padding: 6rem 0 2rem 0;
+
+      .row {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+      }
+  
+      .profile {
+        width: 30%;
+      }
+  
+      .repo {
+        width: 65%;
+      }
+    }
+  }
+}
+
+@include respond-to("small") {
+  .main-wrapper {
+    width: 100%;
+    min-height: 100vh;
+  
+    .header-content {
+      width: 100%;
+      height: fit-content;
+      padding: 3rem 1rem;
+      
+      p {
+        width: 80%;
+        text-align: center;
+      }
+  
+      .input-search {
+        width: 90%;
+      }
+    }
+  
+    .main-content {
+      padding: 4rem 0 2rem 0;
+
+      .container-lg {
+        padding: unset;
+
+        .row {
+          padding: 0.6rem;
+          flex-direction: column;
+        }
+      }
+  
+      .profile {
+        width: 100%;
+        margin-bottom: 30px;
+        display: none;
+
+        &.active {
+          display: flex;
+        }
+  
+        .photo-profile {
+          width: 150px;
+          height: 150px;
+          margin-bottom: 20px;
+        }
+  
+        h3 {
+          font-size: 26px;
+          font-weight: 700;
+          margin-bottom: unset;
+        }
+      }
+
+      .repo {  
+        width: 100%;
+        .head-list-repo {
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+  
+          h3 {
+            margin-bottom: 10px;
+          }
+  
+          .input-group {
+            width: 100%;
+          }
+        }
+  
+        .list-repo {  
+          .item-list-repo {  
+            .title-item-list-repo {
+              width: 100%;
+              margin-bottom: 10px;
+  
+              a {
+                width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              
+              span {
+                width: 20%;
+              }
+            }
+  
+            .desc-item-list-repo {
+              width: 100%;
+            }
+          }
         }
       }
     }
