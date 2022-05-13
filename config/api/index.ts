@@ -4,7 +4,7 @@ export default async function callAPI({
   url, method,
 } : any) {
   const headers = {
-    authorization: 'token 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',
+    authorization: 'token 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',
   };
 
   const response = await axios({
